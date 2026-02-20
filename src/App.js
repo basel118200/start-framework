@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import Layout from "./Components/Layout/Layout.jsx";
@@ -7,7 +8,6 @@ import Contact from "./Components/Contact/Contact.jsx";
 import Portfolio from "./Components/Portfolio/Portfolio.jsx";
 import NotFound from "./Components/NotFound/NotFound.jsx";
 
-// Standard HashRouter configuration
 const routers = createHashRouter([
   {
     path: "/",
@@ -22,12 +22,6 @@ const routers = createHashRouter([
   },
 ]);
 
-function App() {
-  return (
-    <>
-      <RouterProvider router={routers} />
-    </>
-  );
+export default function App() {
+  return <RouterProvider router={routers} />;
 }
-
-export default App;
